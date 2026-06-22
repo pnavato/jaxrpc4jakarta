@@ -351,33 +351,6 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.codehaus.gmaven</groupId>
-                <artifactId>gmaven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>select-java-signatures</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>execute</goal>
-                        </goals>
-                        <configuration>
-                            <source>
-                                javaVersion = project.properties['javaVersion']
-                                if (javaVersion == '1.4') {
-                                    artifactId = 'java14-sun'
-                                } else if (javaVersion == '1.5') {
-                                    artifactId = 'java15-sun'
-                                } else if (javaVersion == '1.6') {
-                                    artifactId = 'java16-sun'
-                                }
-                                project.properties['signatureArtifactId'] = artifactId
-                                project.properties['signatureVersion'] = '1.0'
-                            </source>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
                 <!-- This serves two purposes:
                       (1) we want to generate source JARs for all builds, not just release builds;
                       (2) we need (some of) the source JARs to generate the Javadoc in the apidocs module. -->
@@ -514,7 +487,7 @@
         </plugins>
     </reporting>
     <properties>
-        <javaVersion>1.4</javaVersion>
+        <javaVersion>1.8</javaVersion>
         <baseUrl>http://axis.apache.org/axis/java</baseUrl>
         <baseSiteUrl>scm:svn:https://svn.apache.org/repos/asf/axis/site/axis/java</baseSiteUrl>
     </properties>
