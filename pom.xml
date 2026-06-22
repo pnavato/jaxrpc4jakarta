@@ -165,9 +165,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <prerequisites>
-        <maven>3.0.3</maven>
-    </prerequisites>
     <pluginRepositories>
         <pluginRepository>
             <id>sonatype-snapshots</id>
@@ -402,6 +399,8 @@
                 <artifactId>maven-site-plugin</artifactId>
                 <inherited>false</inherited>
                 <configuration>
+                    <!-- Required by maven-scm-publish-plugin -->
+                    <skipDeploy>true</skipDeploy>
                     <reportPlugins>
                         <plugin>
                             <artifactId>maven-project-info-reports-plugin</artifactId>
@@ -415,14 +414,6 @@
                             </reports>
                         </plugin>
                     </reportPlugins>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <configuration>
-                    <!-- Required by maven-scm-publish-plugin -->
-                    <skipDeploy>true</skipDeploy>
                 </configuration>
             </plugin>
             <plugin>
