@@ -41,10 +41,10 @@
                 <artifactId>axis-rt-core</artifactId>
                 <version>${project.version}</version>
                 <exclusions>
-                    <!-- commons-logging is replaced by ulog -->
+                    <!-- jcl-over-slf4j is replaced by ulog -->
                     <exclusion>
-                        <groupId>commons-logging</groupId>
-                        <artifactId>commons-logging</artifactId>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>jcl-over-slf4j</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
