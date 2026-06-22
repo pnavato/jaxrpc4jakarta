@@ -27,7 +27,7 @@
     <groupId>org.apache.axis</groupId>
     <artifactId>axis-project</artifactId>
     <name>Axis</name>
-    <version>1.5.0</version>
+    <version>1.6.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <url>${baseUrl}/</url>
     <issueManagement>
