@@ -31,31 +31,16 @@
     <packaging>pom</packaging>
     <url>${baseUrl}/</url>
     <issueManagement>
-        <system>jira</system>
-        <url>http://issues.apache.org/jira/browse/AXIS</url>
+        <system>GitHub Issues</system>
+        <url>https://github.com/pnavato/jaxrpc4jakarta/issues</url>
     </issueManagement>
     <scm>
-        <connection>scm:svn:http://svn.apache.org/repos/asf/axis/axis1/java/trunk</connection>
-        <developerConnection>scm:svn:https://svn.apache.org/repos/asf/axis/axis1/java/trunk</developerConnection>
-        <url>http://svn.apache.org/viewvc/axis/axis1/java/trunk</url>
+        <connection>scm:git:https://github.com/pnavato/jaxrpc4jakarta.git</connection>
+        <developerConnection>scm:git:git@github.com:pnavato/jaxrpc4jakarta.git</developerConnection>
+        <url>https://github.com/pnavato/jaxrpc4jakarta</url>
     </scm>
-    <mailingLists>
-        <mailingList>
-            <name>Developer List</name>
-            <subscribe>java-dev-subscribe@axis.apache.org</subscribe>
-            <unsubscribe>java-dev-unsubscribe@axis.apache.org</unsubscribe>
-            <post>java-dev@axis.apache.org</post>
-            <archive>http://mail-archives.apache.org/mod_mbox/axis-java-dev/</archive>
-        </mailingList>
-        <mailingList>
-            <name>User List</name>
-            <subscribe>axis1-java-user-subscribe@axis.apache.org</subscribe>
-            <unsubscribe>axis1-java-user-unsubscribe@axis.apache.org</unsubscribe>
-            <post>axis1-java-user@axis.apache.org</post>
-            <archive>http://mail-archives.apache.org/mod_mbox/axis-axis1-java-user/</archive>
-        </mailingList>
-    </mailingLists>
     <inceptionYear>2000</inceptionYear>
+
     <modules>
 <!--
         <module>apidocs</module>
@@ -100,6 +85,7 @@
         <module>tests</module>
 -->
     </modules>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -488,11 +474,13 @@
             </plugin>
         </plugins>
     </reporting>
+
     <properties>
         <javaVersion>1.8</javaVersion>
-        <baseUrl>http://axis.apache.org/axis/java</baseUrl>
-        <baseSiteUrl>scm:svn:https://svn.apache.org/repos/asf/axis/site/axis/java</baseSiteUrl>
+        <baseUrl>https://github.com/pnavato/jaxrpc4jakarta</baseUrl>
+        <baseSiteUrl>${baseUrl}</baseSiteUrl>
     </properties>
+
     <distributionManagement>
         <site>
             <id>axis</id>
