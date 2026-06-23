@@ -133,6 +133,7 @@ public class ParameterDesc implements Serializable {
      * @param typeQName the parameter's XML type QName
      * @param javaType the parameter's javaType
      */
+    @Deprecated
     public ParameterDesc(QName name, byte mode, QName typeQName, Class javaType) {
       this(name,mode,typeQName,javaType,false,false);
     }

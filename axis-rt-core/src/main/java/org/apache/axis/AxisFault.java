@@ -408,7 +408,7 @@ public class AxisFault extends java.rmi.RemoteException {
      * @deprecated expect to see this go away after 1.1, use
      *             setFaultCodeAsString instead!
      */
-
+    @Deprecated
     public void setFaultCode(String code) {
         setFaultCodeAsString(code);
     }

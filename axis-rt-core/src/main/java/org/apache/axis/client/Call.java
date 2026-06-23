@@ -211,11 +211,13 @@ public class Call implements javax.xml.rpc.Call {
     /**
      * @deprecated use WSDL_SERVICE instead.
      */
+    @Deprecated
     public static final String JAXRPC_SERVICE    = WSDL_SERVICE;
 
     /**
      * @deprecated use WSDL_PORT_NAME instead.
      */
+    @Deprecated
     public static final String JAXRPC_PORTTYPE_NAME = WSDL_PORT_NAME;
 
     /**

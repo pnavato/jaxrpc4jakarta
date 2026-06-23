@@ -1746,6 +1746,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      */
     // TODO: Fix this for SAAJ 1.2 Implementation. marked as deprecated to warn people
     // it is broken
+    @Deprecated
     public Attr getAttributeNode(String attrName) {
         return null;
     }
@@ -1772,6 +1773,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      * @deprecated this is not implemented
      */
     // TODO: implement
+    @Deprecated
     public Attr setAttributeNode(Attr newAttr) throws DOMException {
         return newAttr;
     }
@@ -1874,6 +1876,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      * @param localName local name
      * @return null
      */
+    @Deprecated
     public Attr getAttributeNodeNS(String namespace, String localName) {
         return null;  //TODO: Fix this for SAAJ 1.2 Implementation
     }

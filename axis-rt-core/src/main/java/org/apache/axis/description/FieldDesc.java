@@ -129,6 +129,7 @@ public class FieldDesc implements Serializable {
      *             now lives in ElementDesc and is more flexible (you can set
      *             minOccurs and maxOccurs as you please)
      */ 
+    @Deprecated
     public void setMinOccursIs0(boolean minOccursIs0) {
         this.minOccursIs0 = minOccursIs0;
     }

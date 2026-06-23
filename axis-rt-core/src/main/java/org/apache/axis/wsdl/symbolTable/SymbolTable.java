@@ -355,6 +355,7 @@ public class SymbolTable {
      * @return 
      * @deprecated use specialized get{Element,Type}Index() methods instead
      */
+    @Deprecated
     public Vector getTypes() {
 
         Vector v = new Vector();

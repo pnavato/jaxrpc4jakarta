@@ -29,6 +29,7 @@ package javax.xml.soap;
  * @deprecated - Use javax.xml.soap.SOAPFactory for creating SOAPElements.
  * @see SOAPFactory SOAPFactory
  */
+@Deprecated
 public class SOAPElementFactory {
 
     /**
@@ -52,6 +53,7 @@ public class SOAPElementFactory {
      * @deprecated Use javax.xml.soap.SOAPFactory.createElement(javax.xml.soap.Name) instead
      * @see SOAPFactory#createElement(javax.xml.soap.Name) SOAPFactory.createElement(javax.xml.soap.Name)
      */
+    @Deprecated
     public SOAPElement create(Name name) throws SOAPException {
         return sf.createElement(name);
     }
@@ -68,6 +70,7 @@ public class SOAPElementFactory {
      * @deprecated Use javax.xml.soap.SOAPFactory.createElement(String localName) instead
      * @see SOAPFactory#createElement(java.lang.String) SOAPFactory.createElement(java.lang.String)
      */
+    @Deprecated
     public SOAPElement create(String localName) throws SOAPException {
         return sf.createElement(localName);
     }
@@ -89,6 +92,7 @@ public class SOAPElementFactory {
      * @deprecated Use javax.xml.soap.SOAPFactory.createElement(String localName, String prefix, String uri) instead
      * @see SOAPFactory#createElement(java.lang.String, java.lang.String, java.lang.String) SOAPFactory.createElement(java.lang.String, java.lang.String, java.lang.String)
      */
+    @Deprecated
     public SOAPElement create(String localName, String prefix, String uri)
             throws SOAPException {
         return sf.createElement(localName, prefix, uri);

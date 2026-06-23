@@ -699,6 +699,7 @@ public class SerializationContext implements javax.xml.rpc.encoding.Serializatio
      * @param xmlType is the qname of the type or null.
      * @deprecated use serialize(QName, Attributes, Object, QName, Class) instead
      */
+    @Deprecated
     public void serialize(QName elemQName,
                           Attributes attributes,
                           Object value,
@@ -757,6 +758,7 @@ public class SerializationContext implements javax.xml.rpc.encoding.Serializatio
      * @deprecated use serialize(QName, Attributes, Object, QName,
      * Boolean, Boolean) instead.
      */
+    @Deprecated
     public void serialize(QName elemQName,
                           Attributes attributes,
                           Object value,

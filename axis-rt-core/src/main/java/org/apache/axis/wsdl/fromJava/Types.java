@@ -880,6 +880,7 @@ public class Types {
      * @param element      the Element to append to the Schema node
      * @throws AxisFault
      */
+    @Deprecated
     public void writeSchemaElement(QName qName, Element element)
             throws AxisFault {
         writeSchemaElement(qName.getNamespaceURI(), element);

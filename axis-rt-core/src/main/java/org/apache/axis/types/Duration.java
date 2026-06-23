@@ -360,6 +360,7 @@ public class Duration implements java.io.Serializable {
      * @deprecated use {@link #setSeconds(double) setSeconds(double)}
      * instead
      */
+    @Deprecated
     public void setSeconds(int seconds) {
         this.seconds = seconds;
     }

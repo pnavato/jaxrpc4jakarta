@@ -2515,6 +2515,7 @@ public class Emitter {
      * @return the <code>defaultTypeMapping</code> used by the service
      * @deprecated Use getTypeMappingRegistry instead
      */
+    @Deprecated
     public TypeMapping getDefaultTypeMapping() {
         return (TypeMapping) tmr.getDefaultTypeMapping();
     }
@@ -2524,6 +2525,7 @@ public class Emitter {
      * @param tm the <code>defaultTypeMapping</code> used by the service
      * @deprecated Use setTypeMappingRegistry instead
      */
+    @Deprecated
     public void setDefaultTypeMapping(TypeMapping tm) {
         tmr.registerDefault(tm);
     }
@@ -2610,6 +2612,7 @@ public class Emitter {
      * @param mode 
      * @deprecated (use setStyle and setUse)
      */
+    @Deprecated
     public void setMode(int mode) {
 
         if (mode == MODE_RPC) {
@@ -2630,6 +2633,7 @@ public class Emitter {
      * @return returns the mode (-1 if invalid)
      * @deprecated (use getStyle and getUse)
      */
+    @Deprecated
     public int getMode() {
 
         if (style == Style.RPC) {

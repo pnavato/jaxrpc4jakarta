@@ -262,6 +262,7 @@ public class Constants {
     public static final String URI_SOAP12_NEXT_ROLE =
                                      "http://www.w3.org/2003/05/soap-envelope/role/next";
     /** @deprecated use URI_SOAP12_NEXT_ROLE */
+    @Deprecated
     public static final String URI_SOAP12_NEXT_ACTOR = URI_SOAP12_NEXT_ROLE;
 
     public static final String URI_SOAP12_RPC =

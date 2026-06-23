@@ -122,6 +122,7 @@ public class HTTPConstants {
     /**
      * @deprecated Should use javax.xml.rpc.Call.SOAPACTION_URI_PROPERTY instead.
      */
+    @Deprecated
     public static String MC_HTTP_SOAPACTION = javax.xml.rpc.Call.SOAPACTION_URI_PROPERTY;
 
     /** HTTP header field values

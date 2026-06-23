@@ -672,6 +672,7 @@ public class JavaUtils
     /**
      * @deprecated Use {@link ImageIO#read(InputStream)} instead.
      */
+    @Deprecated
     public static Image getImageFromStream(InputStream is) {
         try {
             return ImageIO.read(is);

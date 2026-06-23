@@ -460,6 +460,7 @@ public abstract class Stub implements javax.xml.rpc.Stub {
      *               in the code to keep compatibility with pre-1.1
      *               generated stubs.
      */
+     @Deprecated
      protected void getResponseHeaders(org.apache.axis.client.Call call) throws AxisFault {
      }
 
