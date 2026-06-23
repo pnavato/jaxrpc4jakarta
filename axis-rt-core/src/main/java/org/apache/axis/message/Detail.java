@@ -64,46 +64,6 @@ public class Detail extends SOAPFaultElement implements javax.xml.soap.Detail {
 
 
 	@Override
-	public SOAPElement addChildElement(QName qname) throws SOAPException {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public SOAPElement addAttribute(QName qname, String value) throws SOAPException {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public String getAttributeValue(QName qname) {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public Iterator getAllAttributesAsQNames() {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public QName createQName(String localName, String prefix) throws SOAPException {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public QName getElementQName() {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public SOAPElement setElementQName(QName newName) throws SOAPException {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public boolean removeAttribute(QName qname) {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
 	public String getBaseURI() {
 		throw new UnsupportedOperationException();
 	}
@@ -183,8 +143,4 @@ public class Detail extends SOAPFaultElement implements javax.xml.soap.Detail {
 		throw new UnsupportedOperationException();
 	}
 
-	@Override
-	public DetailEntry addDetailEntry(QName qname) throws SOAPException {
-		throw new UnsupportedOperationException();
-	}
 }

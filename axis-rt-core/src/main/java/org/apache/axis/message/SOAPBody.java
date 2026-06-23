@@ -307,24 +307,4 @@ public class SOAPBody extends MessageElement
         this.doSAAJEncodingCompliance = true;
     }
 
-
-	@Override
-	public javax.xml.soap.SOAPFault addFault(QName faultCode, String faultString, Locale locale) throws SOAPException {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public javax.xml.soap.SOAPFault addFault(QName faultCode, String faultString) throws SOAPException {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public javax.xml.soap.SOAPBodyElement addBodyElement(QName qname) throws SOAPException {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public Document extractContentAsDocument() throws SOAPException {
-		throw new UnsupportedOperationException();
-	}
 }

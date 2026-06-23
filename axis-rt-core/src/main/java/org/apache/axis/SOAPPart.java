@@ -50,7 +50,6 @@ import org.w3c.dom.UserDataHandler;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-import javax.xml.soap.SOAPElement;
 import javax.xml.soap.SOAPException;
 import javax.xml.soap.SOAPMessage;
 import javax.xml.transform.Source;
@@ -1399,34 +1398,4 @@ public class SOAPPart extends javax.xml.soap.SOAPPart implements Part
 		throw new UnsupportedOperationException();
 	}
 
-	@Override
-	public String getValue() {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public void setValue(String value) {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public void setParentElement(SOAPElement parent) throws SOAPException {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public SOAPElement getParentElement() {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public void detachNode() {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public void recycleNode() {
-		throw new UnsupportedOperationException();
-	}
 }
-

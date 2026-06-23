@@ -19,11 +19,9 @@ import org.apache.axis.message.Detail;
 import org.apache.axis.message.MessageElement;
 import org.apache.axis.message.PrefixedQName;
 
-import javax.xml.namespace.QName;
 import javax.xml.soap.Name;
 import javax.xml.soap.SOAPElement;
 import javax.xml.soap.SOAPException;
-import javax.xml.soap.SOAPFault;
 
 /**
  * SOAP Element Factory implementation
@@ -94,14 +92,4 @@ public class SOAPFactoryImpl extends javax.xml.soap.SOAPFactory {
         return new PrefixedQName("",localName,"");
     }
 
-
-	@Override
-	public SOAPFault createFault(String reasonText, QName faultCode) throws SOAPException {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public SOAPFault createFault() throws SOAPException {
-		throw new UnsupportedOperationException();
-	}
 }

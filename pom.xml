@@ -476,7 +476,7 @@
     </reporting>
 
     <properties>
-        <javaVersion>1.8</javaVersion>
+        <javaVersion>11</javaVersion>
         <baseUrl>https://github.com/pnavato/jaxrpc4jakarta</baseUrl>
         <baseSiteUrl>${baseUrl}</baseSiteUrl>
     </properties>

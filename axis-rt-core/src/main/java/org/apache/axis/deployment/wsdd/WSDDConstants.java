@@ -66,19 +66,15 @@ public class WSDDConstants
     public static final String PROVIDER_RPC = "RPC";
     public static final String PROVIDER_MSG = "MSG";
     public static final String PROVIDER_HANDLER = "Handler";
-    public static final String PROVIDER_EJB = "EJB";
     public static final String PROVIDER_COM = "COM";
     public static final String PROVIDER_BSF = "BSF";
-    public static final String PROVIDER_CORBA = "CORBA";
     public static final String PROVIDER_RMI = "RMI";
     
     public static final QName QNAME_JAVARPC_PROVIDER = new QName(URI_WSDD_JAVA, PROVIDER_RPC);
     public static final QName QNAME_JAVAMSG_PROVIDER = new QName(URI_WSDD_JAVA, PROVIDER_MSG);
     public static final QName QNAME_HANDLER_PROVIDER = new QName("", PROVIDER_HANDLER);
-    public static final QName QNAME_EJB_PROVIDER     = new QName(URI_WSDD_JAVA, PROVIDER_EJB);
     public static final QName QNAME_COM_PROVIDER = new QName(URI_WSDD_JAVA, PROVIDER_COM);
     public static final QName QNAME_BSF_PROVIDER = new QName(URI_WSDD_JAVA, PROVIDER_BSF);
-    public static final QName QNAME_CORBA_PROVIDER = new QName(URI_WSDD_JAVA, PROVIDER_CORBA);
     public static final QName QNAME_RMI_PROVIDER = new QName(URI_WSDD_JAVA, PROVIDER_RMI);
 
     public static final String ELEM_WSDD_PARAM = "parameter";
