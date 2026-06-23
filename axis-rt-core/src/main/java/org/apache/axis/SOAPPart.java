@@ -29,11 +29,11 @@ import org.apache.axis.utils.ByteArray;
 import org.apache.axis.utils.Messages;
 import org.apache.axis.utils.SessionUtils;
 import org.apache.axis.utils.XMLUtils;
-import org.apache.axis.handlers.HandlerChainImpl;
 import org.apache.commons.logging.Log;
 import org.w3c.dom.Attr;
 import org.w3c.dom.CDATASection;
 import org.w3c.dom.Comment;
+import org.w3c.dom.DOMConfiguration;
 import org.w3c.dom.DOMException;
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
@@ -46,9 +46,11 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.ProcessingInstruction;
 import org.w3c.dom.Text;
+import org.w3c.dom.UserDataHandler;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import javax.xml.soap.SOAPElement;
 import javax.xml.soap.SOAPException;
 import javax.xml.soap.SOAPMessage;
 import javax.xml.transform.Source;
@@ -1280,5 +1282,151 @@ public class SOAPPart extends javax.xml.soap.SOAPPart implements Part
     public boolean isBodyStream() {
         return (currentForm == SOAPPart.FORM_INPUTSTREAM || currentForm == SOAPPart.FORM_BODYINSTREAM);        
     }
+
+
+	@Override
+	public String getInputEncoding() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String getXmlEncoding() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public boolean getXmlStandalone() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void setXmlStandalone(boolean xmlStandalone) throws DOMException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String getXmlVersion() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void setXmlVersion(String xmlVersion) throws DOMException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String getDocumentURI() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void setDocumentURI(String documentURI) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public DOMConfiguration getDomConfig() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void normalizeDocument() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Node renameNode(Node n, String namespaceURI, String qualifiedName) throws DOMException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String getBaseURI() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public short compareDocumentPosition(Node other) throws DOMException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String getTextContent() throws DOMException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void setTextContent(String textContent) throws DOMException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public boolean isSameNode(Node other) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String lookupPrefix(String namespaceURI) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public boolean isDefaultNamespace(String namespaceURI) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String lookupNamespaceURI(String prefix) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public boolean isEqualNode(Node arg) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Object getFeature(String feature, String version) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Object setUserData(String key, Object data, UserDataHandler handler) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Object getUserData(String key) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String getValue() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void setValue(String value) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void setParentElement(SOAPElement parent) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public SOAPElement getParentElement() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void detachNode() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void recycleNode() {
+		throw new UnsupportedOperationException();
+	}
 }
 

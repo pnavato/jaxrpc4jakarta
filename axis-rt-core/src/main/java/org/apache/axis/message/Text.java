@@ -213,4 +213,20 @@ public class Text extends NodeImpl implements javax.xml.soap.Text {
         return ( textRep.getData() != null ? textRep.getData().hashCode() : 0 );
     }
 
+
+	@Override
+	public boolean isElementContentWhitespace() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String getWholeText() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public org.w3c.dom.Text replaceWholeText(String content) throws DOMException {
+		throw new UnsupportedOperationException();
+	}
+
 }

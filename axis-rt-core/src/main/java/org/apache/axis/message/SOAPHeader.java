@@ -400,4 +400,30 @@ public class SOAPHeader extends MessageElement
         }
         return headerElement;
     }
+
+
+	@Override
+	public javax.xml.soap.SOAPHeaderElement addHeaderElement(QName qname) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public javax.xml.soap.SOAPHeaderElement addNotUnderstoodHeaderElement(QName name) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public javax.xml.soap.SOAPHeaderElement addUpgradeHeaderElement(Iterator supportedSOAPURIs) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public javax.xml.soap.SOAPHeaderElement addUpgradeHeaderElement(String[] supportedSoapUris) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public javax.xml.soap.SOAPHeaderElement addUpgradeHeaderElement(String supportedSoapUri) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
 }

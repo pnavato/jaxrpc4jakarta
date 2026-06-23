@@ -546,4 +546,35 @@ public class AttachmentPart extends javax.xml.soap.AttachmentPart
         //we get to release memory anyway
         datahandler = null;
     }
+
+
+	@Override
+	public InputStream getRawContent() throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public byte[] getRawContentBytes() throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public InputStream getBase64Content() throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void setRawContent(InputStream content, String contentType) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void setRawContentBytes(byte[] content, int offset, int len, String contentType) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void setBase64Content(InputStream content, String contentType) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
 }

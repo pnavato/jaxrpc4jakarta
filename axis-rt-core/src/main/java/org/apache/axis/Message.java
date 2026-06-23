@@ -30,6 +30,7 @@ import org.apache.commons.logging.Log;
 import javax.xml.soap.AttachmentPart;
 import javax.xml.soap.SOAPException;
 import javax.xml.soap.SOAPBody;
+import javax.xml.soap.SOAPElement;
 import javax.xml.soap.SOAPHeader;
 import javax.xml.soap.SOAPMessage;
 
@@ -759,4 +760,15 @@ public class Message extends javax.xml.soap.SOAPMessage
             mAttachments.dispose();
         }
     }
+
+
+	@Override
+	public void removeAttachments(javax.xml.soap.MimeHeaders headers) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public AttachmentPart getAttachment(SOAPElement element) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
 }

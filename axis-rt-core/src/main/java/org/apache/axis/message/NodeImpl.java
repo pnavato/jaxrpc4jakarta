@@ -30,6 +30,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
+import org.w3c.dom.UserDataHandler;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.AttributesImpl;
 
@@ -857,4 +858,65 @@ public class NodeImpl implements org.w3c.dom.Node, javax.xml.soap.Node,
         }	
         this._isDirty = false;
     }
+
+
+	@Override
+	public String getBaseURI() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public short compareDocumentPosition(Node other) throws DOMException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String getTextContent() throws DOMException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void setTextContent(String textContent) throws DOMException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public boolean isSameNode(Node other) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String lookupPrefix(String namespaceURI) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public boolean isDefaultNamespace(String namespaceURI) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String lookupNamespaceURI(String prefix) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public boolean isEqualNode(Node arg) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Object getFeature(String feature, String version) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Object setUserData(String key, Object data, UserDataHandler handler) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Object getUserData(String key) {
+		throw new UnsupportedOperationException();
+	}
 }

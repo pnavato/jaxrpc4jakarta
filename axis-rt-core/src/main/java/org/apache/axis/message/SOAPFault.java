@@ -423,4 +423,75 @@ public class SOAPFault extends SOAPBodyElement implements javax.xml.soap.SOAPFau
             }
         }
     }
+
+
+	@Override
+	public void setFaultCode(QName faultCodeQName) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public QName getFaultCodeAsQName() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Iterator getFaultSubcodes() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void removeAllFaultSubcodes() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void appendFaultSubcode(QName subcode) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public boolean hasDetail() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Iterator getFaultReasonLocales() throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Iterator getFaultReasonTexts() throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String getFaultReasonText(Locale locale) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void addFaultReasonText(String text, Locale locale) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String getFaultNode() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void setFaultNode(String uri) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String getFaultRole() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void setFaultRole(String uri) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
 }

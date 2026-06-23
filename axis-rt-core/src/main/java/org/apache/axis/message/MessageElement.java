@@ -23,7 +23,6 @@ import org.apache.axis.components.logger.LogFactory;
 import org.apache.axis.encoding.DeserializationContext;
 import org.apache.axis.encoding.Deserializer;
 import org.apache.axis.encoding.SerializationContext;
-import org.apache.axis.encoding.TextSerializationContext;
 import org.apache.axis.constants.Style;
 import org.apache.axis.soap.SOAPConstants;
 import org.apache.axis.utils.Mapping;
@@ -40,6 +39,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
+import org.w3c.dom.TypeInfo;
+import org.w3c.dom.UserDataHandler;
 import org.w3c.dom.NamedNodeMap;
 import org.xml.sax.Attributes;
 import org.xml.sax.ContentHandler;
@@ -2143,4 +2144,125 @@ public class MessageElement extends NodeImpl implements SOAPElement,
         }
         return doc;
     }
+
+
+	@Override
+	public String getBaseURI() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public short compareDocumentPosition(Node other) throws DOMException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String getTextContent() throws DOMException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void setTextContent(String textContent) throws DOMException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public boolean isSameNode(Node other) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String lookupPrefix(String namespaceURI) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public boolean isDefaultNamespace(String namespaceURI) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String lookupNamespaceURI(String prefix) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public boolean isEqualNode(Node arg) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Object getFeature(String feature, String version) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Object setUserData(String key, Object data, UserDataHandler handler) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Object getUserData(String key) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public TypeInfo getSchemaTypeInfo() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void setIdAttribute(String name, boolean isId) throws DOMException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void setIdAttributeNS(String namespaceURI, String localName, boolean isId) throws DOMException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void setIdAttributeNode(Attr idAttr, boolean isId) throws DOMException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public SOAPElement addChildElement(QName qname) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public SOAPElement addAttribute(QName qname, String value) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String getAttributeValue(QName qname) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Iterator getAllAttributesAsQNames() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public QName createQName(String localName, String prefix) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public QName getElementQName() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public SOAPElement setElementQName(QName newName) throws SOAPException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public boolean removeAttribute(QName qname) {
+		throw new UnsupportedOperationException();
+	}
 }
