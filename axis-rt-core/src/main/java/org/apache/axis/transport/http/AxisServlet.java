@@ -26,11 +26,10 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Iterator;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpUtils;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import javax.xml.soap.MimeHeader;
 import javax.xml.soap.MimeHeaders;
 import javax.xml.soap.SOAPException;
@@ -145,7 +144,7 @@ public class AxisServlet extends AxisServletBase {
     /**
      * Initialization method.
      */
-    public void init() throws javax.servlet.ServletException {
+    public void init() throws ServletException {
         super.init();
         ServletContext context = getServletConfig().getServletContext();
 
@@ -262,7 +261,7 @@ public class AxisServlet extends AxisServletBase {
                     // API and to support servlet 2.2 (aka WebSphere 4)
                     // we need to leave this in for a while longer. tomj 10/14/2004
                     //
-                    String url = HttpUtils.getRequestURL(request).toString();
+                    String url = request.getRequestURL().toString();
 
                     msgContext.setProperty(MessageContext.TRANS_URL, url);
 
@@ -634,7 +633,7 @@ public class AxisServlet extends AxisServletBase {
                 /**********************************************************/
             }
             msgContext.setRequestMessage(requestMsg);
-            String url = HttpUtils.getRequestURL(req).toString();
+            String url = req.getRequestURL().toString();
             msgContext.setProperty(MessageContext.TRANS_URL, url);
             // put character encoding of request to message context
             // in order to reuse it during the whole process.
@@ -1182,7 +1181,7 @@ public class AxisServlet extends AxisServletBase {
                                 getOption(queryHandler));
                         Method pluginMethod = plugin.getDeclaredMethod("invoke",
                                 new Class[] {msgContext.getClass()});
-                        String url = HttpUtils.getRequestURL(request).toString();
+                        String url = request.getRequestURL().toString();
 
                         // Place various useful servlet-related objects in
                         // the MessageContext object being delivered to the

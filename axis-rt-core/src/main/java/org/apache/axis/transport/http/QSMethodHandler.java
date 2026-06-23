@@ -22,8 +22,8 @@ import org.apache.axis.MessageContext;
 import org.apache.axis.server.AxisServer;
 import org.apache.axis.utils.Messages;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
 import java.util.Enumeration;
 
@@ -36,7 +36,6 @@ import java.util.Enumeration;
  * @author Doug Davis (dug@us.ibm.com)
  * @author Steve Loughran
  */
-
 public class QSMethodHandler extends AbstractQueryStringHandler  {
 
     /**

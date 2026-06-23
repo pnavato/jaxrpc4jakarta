@@ -30,6 +30,8 @@ import org.apache.axis.i18n.Messages;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
+import jakarta.servlet.ServletException;
+
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.InputStream;
 import java.io.IOException;
@@ -50,7 +52,7 @@ public class AutoRegisterServlet extends AxisServletBase {
     /**
      * init by registering
      */
-    public void init() throws javax.servlet.ServletException {
+    public void init() throws ServletException {
         log.debug(Messages.getMessage("autoRegServletInit00"));
         autoRegister();
     }

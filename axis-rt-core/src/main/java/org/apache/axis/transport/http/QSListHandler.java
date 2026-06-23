@@ -19,7 +19,7 @@ package org.apache.axis.transport.http;
 import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.axis.AxisFault;
 import org.apache.axis.MessageContext;
@@ -38,7 +38,6 @@ import org.w3c.dom.Document;
  * @author Doug Davis (dug@us.ibm.com)
  * @author Steve Loughran
  */
-
 public class QSListHandler extends AbstractQueryStringHandler  {
      /**
       * Performs the action associated with this particular query string
