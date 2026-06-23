@@ -22,8 +22,7 @@
     <parent>
         <groupId>org.apache.axis</groupId>
         <artifactId>axis-project</artifactId>
-        <version>1.6.0</version>
-        <relativePath>../pom.xml</relativePath>
+        <version>1.7.0-SNAPSHOT</version>
     </parent>
     <artifactId>axis-rt-jws</artifactId>
     <name>JWS Support</name>
