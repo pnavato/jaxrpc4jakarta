@@ -102,7 +102,7 @@ public class VectorDeserializer extends DeserializerImpl
         // If the xsi:nil attribute, set the value to null and return since
         // there is nothing to deserialize.
         if (context.isNil(attributes)) {
-            setChildValue(null, new Integer(curIndex++));
+            setChildValue(null, Integer.valueOf(curIndex++));
             return null;
         }
 
@@ -122,7 +122,7 @@ public class VectorDeserializer extends DeserializerImpl
         // When the value is deserialized, inform us.
         // Need to pass the index because multi-ref stuff may 
         // result in the values being deserialized in a different order.
-        dSer.registerValueTarget(new DeserializerTarget(this, new Integer(curIndex)));
+        dSer.registerValueTarget(new DeserializerTarget(this, Integer.valueOf(curIndex)));
         curIndex++;
 
         if (log.isDebugEnabled()) {

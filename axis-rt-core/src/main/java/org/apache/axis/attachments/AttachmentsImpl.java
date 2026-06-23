@@ -251,7 +251,7 @@ public class AttachmentsImpl implements Attachments {
             throws org.apache.axis.AxisFault {
 
         // Searching for the same attachements
-    	Integer key = new Integer(datahandler.hashCode());
+    	Integer key = Integer.valueOf(datahandler.hashCode());
     	if (stackDataHandler.containsKey(key)) {
         	return (Part)stackDataHandler.get(key);
         }

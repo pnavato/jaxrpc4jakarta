@@ -88,7 +88,7 @@ public class SessionUtils {
      * @return a new session.
      */
     public static synchronized Long generateSession() {
-        return new Long(getRandom().nextLong());
+        return Long.valueOf(getRandom().nextLong());
     }
 
     /**

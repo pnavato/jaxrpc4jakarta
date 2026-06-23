@@ -57,7 +57,7 @@ public class TestGlobalTypeMappings extends GenericLocalTest {
         call.addParameter("arg0", TYPE_QNAME, ParameterMode.IN);
         Data data = new Data();
         data.stringMember = "doc lit test";
-        data.floatMember = new Float(451.0F);
+        data.floatMember = Float.valueOf(451.0F);
         call.invoke("echoData", new Object [] { data });
     }
 

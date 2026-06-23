@@ -54,7 +54,7 @@ public class UnsignedByte extends UnsignedShort {
             throw new NumberFormatException(
                     Messages.getMessage("badUnsignedByte00") +
                     String.valueOf(sValue) + "]");
-        lValue = new Long(sValue);
+        lValue = Long.valueOf(sValue);
     }
 
     /**

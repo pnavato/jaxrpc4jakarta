@@ -298,12 +298,10 @@ public class ArrayDeserializer extends DeserializerImpl
                         // The valueReady method uses this array to set the
                         // proper mult-dim element.
                         mDimLength = new ArrayList();
-                        mDimLength.add(new Integer(length));
+                        mDimLength.add(Integer.valueOf(length));
                         
                         while(tokenizer.hasMoreTokens()) {
-                            mDimLength.add(
-                                new Integer(
-                                    Integer.parseInt(tokenizer.nextToken())));
+                            mDimLength.add(Integer.valueOf(tokenizer.nextToken()));
                         }
                     }
 
@@ -413,7 +411,7 @@ public class ArrayDeserializer extends DeserializerImpl
             // If the xsi:nil attribute, set the value to null 
             // and return since there is nothing to deserialize.
             if (context.isNil(attributes)) {
-                setChildValue(null, new Integer(curIndex++));
+                setChildValue(null, Integer.valueOf(curIndex++));
                 return null;
             }
         }
@@ -472,7 +470,7 @@ public class ArrayDeserializer extends DeserializerImpl
         // Register the callback value target, and
         // keep track of this index so we know when it has been set.
         dSer.registerValueTarget(
-            new DeserializerTarget(this, new Integer(curIndex)));
+            new DeserializerTarget(this, Integer.valueOf(curIndex)));
         
         // The framework handles knowing when the value is complete, as
         // long as we tell it about each child we're waiting on...
@@ -630,7 +628,7 @@ public class ArrayDeserializer extends DeserializerImpl
                         throw new SAXException(
                             Messages.getMessage(exceptKey, text));
                     }
-                    work.add(new Integer(workIndex));
+                    work.add(Integer.valueOf(workIndex));
                 }
                 index = toSingleIndex(work); // Convert to single index
             }
@@ -659,14 +657,14 @@ public class ArrayDeserializer extends DeserializerImpl
                 for (int j=i+1; j<mDimLength.size(); j++) {
                     factor *= ((Integer)mDimLength.get(j)).intValue();
                 }
-                mDimFactor.add(new Integer(factor));
+                mDimFactor.add(Integer.valueOf(factor));
             }
         }
 
         ArrayList rc = new ArrayList();
         for (int i=0; i < mDimLength.size(); i++) {
             int factor = ((Integer)mDimFactor.get(i)).intValue();
-            rc.add(new Integer(single / factor));
+            rc.add(Integer.valueOf(single / factor));
             single = single % factor;
         }
         return rc;
@@ -689,7 +687,7 @@ public class ArrayDeserializer extends DeserializerImpl
                 for (int j=i+1; j<mDimLength.size(); j++) {
                     factor *= ((Integer)mDimLength.get(j)).intValue();
                 }
-                mDimFactor.add(new Integer(factor));
+                mDimFactor.add(Integer.valueOf(factor));
             }
         }
 

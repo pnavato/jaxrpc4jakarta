@@ -27,7 +27,7 @@ import org.apache.axis.utils.Messages;
  */
 public class UnsignedInt extends java.lang.Number {
 
-    protected Long lValue = new Long(0);
+    protected Long lValue = Long.valueOf(0);
 
     public UnsignedInt() {
     }
@@ -56,7 +56,7 @@ public class UnsignedInt extends java.lang.Number {
             throw new NumberFormatException(
                     Messages.getMessage("badUnsignedInt00") +
                     String.valueOf(iValue) + "]");
-      lValue = new Long(iValue);
+      lValue = Long.valueOf(iValue);
     }
 
     public String toString(){

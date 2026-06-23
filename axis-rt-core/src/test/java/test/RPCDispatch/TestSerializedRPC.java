@@ -1,6 +1,5 @@
 package test.RPCDispatch;
 
-import junit.framework.TestCase;
 import org.apache.axis.AxisFault;
 import org.apache.axis.Constants;
 import org.apache.axis.Message;
@@ -229,38 +228,38 @@ public class TestSerializedRPC extends XMLTestCase {
 
         // float
         arg = "<arg0>NaN</arg0>";
-        expected = new Float(Float.NaN);
+        expected = Float.NaN;
         assertEquals("method test failed with a float",
                      expected,
                      rpc("testFloat", arg, true));
 
         arg = "<arg0>INF</arg0>";
-        expected = new Float(Float.POSITIVE_INFINITY);
+        expected = Float.POSITIVE_INFINITY;
         assertEquals("method test failed with a float",
                      expected,
                      rpc("testFloat", arg, true));
 
         arg = "<arg0>-INF</arg0>";
-        expected = new Float(Float.NEGATIVE_INFINITY);
+        expected = Float.NEGATIVE_INFINITY;
         assertEquals("method test failed with a float",
                      expected,
                      rpc("testFloat", arg, true));
 
         // double
         arg = "<arg0>NaN</arg0>";
-        expected = new Double(Double.NaN);
+        expected = Double.NaN;
         assertEquals("method test failed with a double",
                      expected,
                      rpc("testDouble", arg, true));
 
         arg = "<arg0>INF</arg0>";
-        expected = new Double(Double.POSITIVE_INFINITY);
+        expected = Double.POSITIVE_INFINITY;
         assertEquals("method test failed with a double",
                      expected,
                      rpc("testDouble", arg, true));
 
         arg = "<arg0>-INF</arg0>";
-        expected = new Double(Double.NEGATIVE_INFINITY);
+        expected = Double.NEGATIVE_INFINITY;
         assertEquals("method test failed with a double",
                      expected,
                      rpc("testDouble", arg, true));
@@ -296,7 +295,7 @@ public class TestSerializedRPC extends XMLTestCase {
 
         // int
         arg = "<arg0>5</arg0>";
-        expected = new Integer(5);
+        expected = Integer.valueOf(5);
         assertEquals("Overloaded method test failed with an int",
                      expected,
                      rpc("overloaded", arg, true));

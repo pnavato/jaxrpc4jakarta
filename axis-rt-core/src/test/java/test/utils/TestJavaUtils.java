@@ -101,8 +101,8 @@ public class TestJavaUtils extends TestCase
      */ 
     public void testConvert() {
         Integer[] array = new Integer[4];
-        array[0] = new Integer(5); array[1] = new Integer(4);
-        array[2] = new Integer(3); array[3] = new Integer(2);
+        array[0] = Integer.valueOf(5); array[1] = Integer.valueOf(4);
+        array[2] = Integer.valueOf(3); array[3] = Integer.valueOf(2);
         
         Object ret = JavaUtils.convert(array, List.class);
         assertTrue("Converted array not a List", (ret instanceof List));
@@ -139,8 +139,8 @@ public class TestJavaUtils extends TestCase
         // Make sure we convert ArrayList to array in 2D cases
         Object[] arrayin = new Object[1];
         ArrayList data = new ArrayList(5);
-        data.add("one"); data.add(new Integer(2)); data.add(new Float(4.0));
-        data.add(new Double(5.0)); data.add("five");
+        data.add("one"); data.add(Integer.valueOf(2)); data.add(Float.valueOf(4.0f));
+        data.add(Double.valueOf(5.0)); data.add("five");
         arrayin[0] = data;
         ret = JavaUtils.convert(arrayin, Object[][].class);
         assertTrue("Converted 2D array/ArrayList wrong", ret.getClass().equals(Object[][].class));
@@ -174,10 +174,10 @@ public class TestJavaUtils extends TestCase
      * test the isConvertable() function
      */
     public void testIsConvert() {
-        assertTrue(JavaUtils.isConvertable(new Long(1),Long.class));
-        assertTrue(JavaUtils.isConvertable(new Long(1),long.class));
-        assertTrue(JavaUtils.isConvertable(new Long(1),Object.class));
-        assertTrue(!JavaUtils.isConvertable(new Long(1),Float.class));
+        assertTrue(JavaUtils.isConvertable(Long.valueOf(1),Long.class));
+        assertTrue(JavaUtils.isConvertable(Long.valueOf(1),long.class));
+        assertTrue(JavaUtils.isConvertable(Long.valueOf(1),Object.class));
+        assertTrue(!JavaUtils.isConvertable(Long.valueOf(1),Float.class));
         Class clazz = long.class;
         assertTrue(JavaUtils.isConvertable(clazz,Long.class));
         assertTrue(JavaUtils.isConvertable(clazz,Object.class));

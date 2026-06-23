@@ -35,7 +35,7 @@ public class EncodingTest extends TestCase {
             //ignore legit whitespace
             if ("\t\n\r".indexOf(c) == -1) {
                 //verify the others are caught
-                String s=(new Character(c)).toString();
+                String s=(Character.valueOf(c)).toString();
                 assertInvalidStringsDetected(s);
             }
         }
@@ -128,7 +128,7 @@ public class EncodingTest extends TestCase {
     private void verifyUntouched(XMLEncoder encoder, String source) {
         for(int i=0;i<source.length();i++) {
             char c = source.charAt(i);
-            Character ch = new Character(c);
+            Character ch = Character.valueOf(c);
             String xmlString = ch.toString();
             String encoded= encoder.encode(xmlString);
             assertEquals("Char " +(int) c + " was encoded as " + hexDump(encoded),

@@ -70,7 +70,7 @@ public class JavaUtils
      * The prefered line separator
      */
     public static final String LS = System.getProperty("line.separator",
-                                                       (new Character(NL)).toString());
+                                                       (Character.valueOf(NL)).toString());
 
 
     public static Class getWrapperClass(Class primitive)

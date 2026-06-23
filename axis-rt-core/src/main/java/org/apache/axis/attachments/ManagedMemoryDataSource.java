@@ -541,7 +541,7 @@ public class ManagedMemoryDataSource implements javax.activation.DataSource {
                         Messages.getMessage("streamClosed"));
             }
 
-            int ret = new Long(Math.min(Integer.MAX_VALUE, totalsz - bread)).intValue();
+            int ret = Long.valueOf(Math.min(Integer.MAX_VALUE, totalsz - bread)).intValue();
 
             if (debugEnabled) {
                 is_log.debug("available() = " + ret + ".");
@@ -731,7 +731,7 @@ public class ManagedMemoryDataSource implements javax.activation.DataSource {
                         longlen,
                         totalsz
                         - bread);    // Only return the number of bytes in the data store that is left.
-                len = new Long(longlen).intValue();
+                len = Long.valueOf(longlen).intValue();
                 
                 if (debugEnabled) {
                     is_log.debug("len = " + len);

@@ -94,6 +94,6 @@ public class TestHrefs extends TestCase {
     public void testIntReference1() throws Exception {
         String result =
             "<result root=\"0\" id=\"1\" xsi:type=\"xsd:int\">567</result>";
-        deserialize(result, new Integer(567), 0);
+        deserialize(result, Integer.valueOf(567), 0);
     }
 }

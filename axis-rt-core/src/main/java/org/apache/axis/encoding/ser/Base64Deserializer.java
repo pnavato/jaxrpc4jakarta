@@ -55,7 +55,7 @@ public class Base64Deserializer extends SimpleDeserializer  {
             Byte[] data = new Byte[ value.length ];
             for (int i=0; i<data.length; i++) {
                 byte b = value[i];
-                data[i] = new Byte(b);
+                data[i] = Byte.valueOf(b);
             }
             return data;
         }

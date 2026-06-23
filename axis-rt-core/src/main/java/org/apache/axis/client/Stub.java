@@ -237,7 +237,7 @@ public abstract class Stub implements javax.xml.rpc.Stub {
      * Set the timeout in milliseconds.
      */
     public void setTimeout(int timeout) {
-        cachedTimeout = new Integer(timeout);
+        cachedTimeout = Integer.valueOf(timeout);
     } // setTimeout
 
     /**

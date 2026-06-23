@@ -638,7 +638,7 @@ public class HTTPSender extends BasicHandler {
                     }
                     returnCode = Integer.parseInt(tmp);
                     msgContext.setProperty(HTTPConstants.MC_HTTP_STATUS_CODE,
-                            new Integer(returnCode));
+                            Integer.valueOf(returnCode));
                     msgContext.setProperty(HTTPConstants.MC_HTTP_STATUS_MESSAGE,
                             name.substring(start + end + 1));
                 } else {

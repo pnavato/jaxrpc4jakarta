@@ -123,7 +123,7 @@ public class DefaultSocketFactory implements SocketFactory {
             }
         } else {
             sock = create(tcp.getProxyHost(),
-                    new Integer(tcp.getProxyPort()).intValue(),
+                    Integer.valueOf(tcp.getProxyPort()).intValue(),
                     timeout);
             if (log.isDebugEnabled()) {
                 log.debug(Messages.getMessage("createdHTTP01", tcp.getProxyHost(),
@@ -148,9 +148,9 @@ public class DefaultSocketFactory implements SocketFactory {
         if (plain || timeout == 0) {
             sock = new Socket(host, port);
         } else {
-            Object address = inetConstructor.newInstance(new Object[]{host, new Integer(port)});
+            Object address = inetConstructor.newInstance(new Object[]{host, Integer.valueOf(port)});
             sock = (Socket)socketConstructor.newInstance(new Object[]{});
-            connect.invoke(sock, new Object[]{address, new Integer(timeout)});
+            connect.invoke(sock, new Object[]{address, Integer.valueOf(timeout)});
         }
         return sock;
     }

@@ -1194,9 +1194,9 @@ public class AxisServlet extends AxisServletBase {
                                                handlerName);
                         msgContext.setProperty(HTTPConstants.
                                                PLUGIN_IS_DEVELOPMENT,
-                                               new Boolean(isDevelopment()));
+                                               Boolean.valueOf(isDevelopment()));
                         msgContext.setProperty(HTTPConstants.PLUGIN_ENABLE_LIST,
-                                               new Boolean(enableList));
+                                               Boolean.valueOf(enableList));
                         msgContext.setProperty(HTTPConstants.PLUGIN_ENGINE,
                                                engine);
                         msgContext.setProperty(HTTPConstants.PLUGIN_WRITER,

@@ -197,21 +197,21 @@ public class ArrayUtil {
             obj = cls.newInstance();
         else {
             if (boolean.class.isAssignableFrom(cls)) 
-                obj = new Boolean(false);
+                obj = Boolean.valueOf(false);
             else if (byte.class.isAssignableFrom(cls)) 
-                obj = new Byte((byte)0);
+                obj = Byte.valueOf((byte)0);
             else if (char.class.isAssignableFrom(cls))
-                obj = new Character('\u0000');
+                obj = Character.valueOf('\u0000');
             else if (short.class.isAssignableFrom(cls))
-                obj = new Short((short)0);
+                obj = Short.valueOf((short)0);
             else if (int.class.isAssignableFrom(cls))
-                obj = new Integer(0);
+                obj = Integer.valueOf(0);
             else if (long.class.isAssignableFrom(cls))
-                obj = new Long(0L);
+                obj = Long.valueOf(0L);
             else if (float.class.isAssignableFrom(cls))
-                obj = new Float(0.0F);
+                obj = Float.valueOf(0.0F);
             else if (double.class.isAssignableFrom(cls))
-                obj = new Double(0.0D);
+                obj = Double.valueOf(0.0D);
         }
         
         return obj;

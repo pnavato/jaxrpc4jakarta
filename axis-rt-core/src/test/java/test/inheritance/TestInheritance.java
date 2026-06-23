@@ -42,7 +42,7 @@ public class TestInheritance extends TestCase {
         assertTrue("Overloaded (String) method returned bad result",
                 ret.startsWith(Parent.OVERLOAD_MSG));
         ret = (String)call.invoke("overloaded",
-                                  new Object [] { new Integer(5) });
+                                  new Object [] { Integer.valueOf(5) });
         assertTrue("Overloaded (int) method returned bad result",
                 ret.startsWith(Child.OVERLOAD_MSG));
 

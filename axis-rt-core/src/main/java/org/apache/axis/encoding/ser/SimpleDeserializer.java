@@ -277,47 +277,47 @@ public class SimpleDeserializer extends DeserializerImpl {
         if (javaType == float.class ||
             javaType == java.lang.Float.class) {
             if (source.equals("NaN")) {
-                return new Float(Float.NaN);
+                return Float.NaN;
             } else if (source.equals("INF")) {
-                return new Float(Float.POSITIVE_INFINITY);
+                return Float.POSITIVE_INFINITY;
             } else if (source.equals("-INF")) {
-                return new Float(Float.NEGATIVE_INFINITY);
+                return Float.NEGATIVE_INFINITY;
             } else {
-                return new Float(source);
+                return Float.valueOf(source);
             }
         }
         
         if (javaType == double.class ||
             javaType == java.lang.Double.class) {
             if (source.equals("NaN")) {
-                return new Double(Double.NaN);
+                return Double.NaN;
             } else if (source.equals("INF")) {
-                return new Double(Double.POSITIVE_INFINITY);
+                return Double.POSITIVE_INFINITY;
             } else if (source.equals("-INF")) {
-                return new Double(Double.NEGATIVE_INFINITY);
+                return Double.NEGATIVE_INFINITY;
             } else {
-                return new Double(source);
+                return Double.valueOf(source);
             }
         }    
         
         if (javaType == int.class ||
             javaType == java.lang.Integer.class) {
-            return new Integer(source);
+            return Integer.valueOf(source);
         }
         
         if (javaType == short.class ||
             javaType == java.lang.Short.class) {
-            return new Short(source);
+            return Short.valueOf(source);
         }
         
         if (javaType == long.class ||
             javaType == java.lang.Long.class) {
-            return new Long(source);
+            return Long.valueOf(source);
         }
         
         if (javaType == byte.class ||
             javaType == java.lang.Byte.class) {
-            return new Byte(source);
+            return Byte.valueOf(source);
         }
         
         if (javaType == org.apache.axis.types.URI.class) {

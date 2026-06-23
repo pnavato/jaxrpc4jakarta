@@ -159,7 +159,7 @@ public class BeanPropertyDescriptor
             IndexedPropertyDescriptor id = (IndexedPropertyDescriptor)myPD;
             return id.getIndexedReadMethod().invoke(obj,
                                                     new Object[] {
-                                                        new Integer(i)});
+                                                        Integer.valueOf(i)});
         }
     }
 
@@ -177,7 +177,7 @@ public class BeanPropertyDescriptor
             growArrayToSize(obj, id.getIndexedPropertyType(), i);
             id.getIndexedWriteMethod().invoke(obj,
                                               new Object[] {
-                                                  new Integer(i), newValue});
+                                                  Integer.valueOf(i), newValue});
         } else {
             // Not calling 'growArrayToSize' to avoid an extra call to the
             // property's setter. The setter will be called at the end anyway.

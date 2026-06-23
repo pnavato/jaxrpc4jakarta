@@ -49,7 +49,7 @@ public class TestSer extends TestCase {
 
         Data data = new Data();
         data.stringMember = "String member";
-        data.floatMember = new Float("4.54");
+        data.floatMember = Float.valueOf("4.54");
 
         RPCParam arg2 = new RPCParam("", "struct", data);
         RPCElement body = new RPCElement("urn:myNamespace", "method1", new Object[]{ arg1, arg2 });

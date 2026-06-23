@@ -26,31 +26,31 @@ import org.xml.sax.ext.LexicalHandler;
  */
 public class SAX2EventRecorder { 
     
-    private static final Integer Z = new Integer(0);
+    private static final Integer Z = Integer.valueOf(0);
 
-    private static final Integer STATE_START_DOCUMENT = new Integer(1);
-    private static final Integer STATE_END_DOCUMENT = new Integer(2);
-    private static final Integer STATE_START_PREFIX_MAPPING = new Integer(3);
-    private static final Integer STATE_END_PREFIX_MAPPING = new Integer(4);
-    private static final Integer STATE_START_ELEMENT = new Integer(5);
-    private static final Integer STATE_END_ELEMENT = new Integer(6);
-    private static final Integer STATE_CHARACTERS = new Integer(7);
-    private static final Integer STATE_IGNORABLE_WHITESPACE = new Integer(8);
-    private static final Integer STATE_PROCESSING_INSTRUCTION = new Integer(9);
-    private static final Integer STATE_SKIPPED_ENTITY = new Integer(10);
+    private static final Integer STATE_START_DOCUMENT = Integer.valueOf(1);
+    private static final Integer STATE_END_DOCUMENT = Integer.valueOf(2);
+    private static final Integer STATE_START_PREFIX_MAPPING = Integer.valueOf(3);
+    private static final Integer STATE_END_PREFIX_MAPPING = Integer.valueOf(4);
+    private static final Integer STATE_START_ELEMENT = Integer.valueOf(5);
+    private static final Integer STATE_END_ELEMENT = Integer.valueOf(6);
+    private static final Integer STATE_CHARACTERS = Integer.valueOf(7);
+    private static final Integer STATE_IGNORABLE_WHITESPACE = Integer.valueOf(8);
+    private static final Integer STATE_PROCESSING_INSTRUCTION = Integer.valueOf(9);
+    private static final Integer STATE_SKIPPED_ENTITY = Integer.valueOf(10);
     
     // This is a "custom" event which tells DeserializationContexts
     // that the current element is moving down the stack...
-    private static final Integer STATE_NEWELEMENT = new Integer(11);
+    private static final Integer STATE_NEWELEMENT = Integer.valueOf(11);
 
     // Lexical handler events...
-    private static final Integer STATE_START_DTD = new Integer(12);
-    private static final Integer STATE_END_DTD = new Integer(13);
-    private static final Integer STATE_START_ENTITY = new Integer(14);
-    private static final Integer STATE_END_ENTITY = new Integer(15);
-    private static final Integer STATE_START_CDATA = new Integer(16);
-    private static final Integer STATE_END_CDATA = new Integer(17);
-    private static final Integer STATE_COMMENT = new Integer(18);
+    private static final Integer STATE_START_DTD = Integer.valueOf(12);
+    private static final Integer STATE_END_DTD = Integer.valueOf(13);
+    private static final Integer STATE_START_ENTITY = Integer.valueOf(14);
+    private static final Integer STATE_END_ENTITY = Integer.valueOf(15);
+    private static final Integer STATE_START_CDATA = Integer.valueOf(16);
+    private static final Integer STATE_END_CDATA = Integer.valueOf(17);
+    private static final Integer STATE_COMMENT = Integer.valueOf(18);
     
     objArrayVector events = new objArrayVector();
     

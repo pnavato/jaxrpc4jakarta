@@ -26,8 +26,8 @@ import org.apache.axis.message.SOAPEnvelope;
 
 public class ServiceHandler extends BasicHandler {
     public static final String OUTPARAM1 = "Output param value";
-    public static final Float OUTPARAM2 = new Float(4.56);
-    public static final Integer RESPONSE = new Integer(5);
+    public static final Float OUTPARAM2 = Float.valueOf(4.56f);
+    public static final Integer RESPONSE = Integer.valueOf(5);
 
     public void invoke(MessageContext msgContext) throws AxisFault {
         SOAPEnvelope env = new SOAPEnvelope();

@@ -43,7 +43,7 @@ public class TestSimpleSession extends TestCase implements ServiceLifecycle {
 
     public void testSessionAPI() {
         SimpleSession session = new SimpleSession();
-        Object val = new Float(5.6666);
+        Object val = Float.valueOf(5.6666f);
         session.set("test", val);
         
         assertEquals("\"test\" equals \"" + session.get("test") + "\", not \"" + val + "\" as expected",
@@ -149,9 +149,9 @@ public class TestSimpleSession extends TestCase implements ServiceLifecycle {
             throw new Exception("No session in MessageContext!");
         Integer count = (Integer)session.get("counter");
         if (count == null) {
-            count = new Integer(0);
+            count = Integer.valueOf(0);
         }
-        count = new Integer(count.intValue() + 1);
+        count = Integer.valueOf(count.intValue() + 1);
         session.set("counter", count);
         return count;
     }

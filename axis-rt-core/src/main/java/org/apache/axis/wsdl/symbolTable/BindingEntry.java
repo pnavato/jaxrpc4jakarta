@@ -359,7 +359,7 @@ public class BindingEntry extends SymTabEntry {
                 ? headerFlags
                 : (I.intValue() | headerFlags);
 
-        opMap.put(partName, new Integer(i));
+        opMap.put(partName, Integer.valueOf(i));
     }    // setHeaderPart
 
     /**

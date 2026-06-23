@@ -193,21 +193,21 @@ public class SimpleListDeserializer extends SimpleDeserializer {
         if (javaType == float.class ||
                 javaType == java.lang.Float.class) {
             if (source.equals("NaN")) {
-                return new Float(Float.NaN);
+                return Float.NaN;
             } else if (source.equals("INF")) {
-                return new Float(Float.POSITIVE_INFINITY);
+                return Float.POSITIVE_INFINITY;
             } else if (source.equals("-INF")) {
-                return new Float(Float.NEGATIVE_INFINITY);
+                return Float.NEGATIVE_INFINITY;
             }
         }
         if (javaType == double.class ||
                 javaType == java.lang.Double.class) {
             if (source.equals("NaN")) {
-                return new Double(Double.NaN);
+                return Double.NaN;
             } else if (source.equals("INF")) {
-                return new Double(Double.POSITIVE_INFINITY);
+                return Double.POSITIVE_INFINITY;
             } else if (source.equals("-INF")) {
-                return new Double(Double.NEGATIVE_INFINITY);
+                return Double.NEGATIVE_INFINITY;
             }
         }
         if (javaType == QName.class) {

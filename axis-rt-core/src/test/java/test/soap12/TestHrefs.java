@@ -87,7 +87,7 @@ public class TestHrefs extends TestCase {
                         "<result root=\"0\" id=\"1\" xsi:type=\"xsd:int\">567</result>" +
                         "<reference ref=\"#1\"/>\n" +
                         BODYT;
-        deserialize(result, new Integer(567), 1);
+        deserialize(result, Integer.valueOf(567), 1);
     }
 
     public void testStringReferenceInHeader() throws Exception {

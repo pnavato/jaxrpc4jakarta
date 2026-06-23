@@ -52,7 +52,7 @@ public class UnsignedShort extends UnsignedInt {
             throw new NumberFormatException(
                 Messages.getMessage("badUnsignedShort00") +
                     String.valueOf(sValue) + "]");
-        lValue = new Long(sValue);
+        lValue = Long.valueOf(sValue);
     }
 
     /**
